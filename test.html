@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Home</title>
+		<style>
+			body {
+				font-family: "Inter", Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				overflow: hidden;
+				/* Subtle browser window SVG as background */
+				background: #f8fafc
+					url("https://i.ibb.co/rGmLzKT4/nasa-Q1p7bh3-SHj8-unsplash.jpg")
+					no-repeat center center;
+				background-size: cover;
+			}
+			.container {
+				background-color: rgba(255, 255, 255, 0.08);
+				border-radius: 18px;
+				/* box-shadow: 0 2px 24px rgba(0, 0, 0, 0.08); */
+				padding: 40px 32px 32px 32px;
+				max-width: 340px;
+				width: 100%;
+				text-align: center;
+				position: relative;
+				z-index: 2;
+				backdrop-filter: blur(10px);
+				box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+				border: 1px solid rgba(255, 255, 255, 0.15);
+				color: #f3f4f6;
+			}
+			.iconic-logo {
+				width: 64px;
+				height: 64px;
+				margin: 0 auto 24px auto;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			h1 {
+				margin: 0 0 28px 0;
+				font-size: 1.5rem;
+				font-weight: 600;
+				color: #f3f4f6;
+				letter-spacing: 0.01em;
+			}
+			.search-bar {
+				display: flex;
+				margin-bottom: 24px;
+				border: 1px solid #e5e7eb;
+				border-radius: 10px;
+				background: #22223b;
+			}
+			.search-bar input {
+				flex: 1;
+				padding: 12px;
+				border: none;
+				background: transparent;
+				outline: none;
+				font-size: 16px;
+				color: #f3f4f6;
+			}
+			.search-bar input::placeholder {
+				color: #cbd5e1;
+			}
+			.search-bar button {
+				padding: 0 18px;
+				border: none;
+				background: none;
+				color: #a5b4fc;
+				font-size: 18px;
+				cursor: pointer;
+				border-radius: 0 10px 10px 0;
+				transition: color 0.2s;
+			}
+			.search-bar button:hover {
+				color: #f3f4f6;
+			}
+			.quick-links {
+				display: flex;
+				gap: 18px;
+				justify-content: center;
+				margin-top: 10px;
+			}
+			.quick-link {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-decoration: none;
+				color: #f3f4f6;
+				font-size: 12px;
+				transition: transform 0.15s, background 0.2s;
+				padding: 8px 6px 2px 6px;
+				border-radius: 10px;
+			}
+			.quick-link:hover {
+				background: rgba(255,255,255,0.08);
+				transform: translateY(-2px) scale(1.07);
+			}
+			.quick-link svg {
+				width: 28px;
+				height: 28px;
+				margin-bottom: 4px;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#" class="settings-icon" title="Settings">
+			<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f3f4f6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:block;">
+				<circle cx="12" cy="12" r="3.5"/>
+				<path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.09a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.09a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.09a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+			</svg>
+		</a>
+		<div class="container">
+			<div class="iconic-logo">
+				<!-- Minimalist globe SVG icon -->
+				<svg
+					width="48"
+					height="48"
+					viewBox="0 0 48 48"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<circle
+						cx="24"
+						cy="24"
+						r="20"
+						stroke="#6366f1"
+						stroke-width="3"
+						fill="none"
+					/>
+					<ellipse
+						cx="24"
+						cy="24"
+						rx="20"
+						ry="8"
+						stroke="#6366f1"
+						stroke-width="2"
+						fill="none"
+					/>
+					<ellipse
+						cx="24"
+						cy="24"
+						rx="8"
+						ry="20"
+						stroke="#6366f1"
+						stroke-width="2"
+						fill="none"
+					/>
+				</svg>
+			</div>
+			<h1>Browser Home</h1>
+			<form
+				class="search-bar"
+				action="https://www.google.com/search"
+				method="GET"
+				target="_blank"
+			>
+				<input
+					type="text"
+					name="q"
+					placeholder="Search the web..."
+					required
+				/>
+				<button type="submit" title="Search">&#128269;</button>
+			</form>
+			<div class="quick-links">
+				<a
+					class="quick-link"
+					href="https://www.google.com"
+					target="_blank"
+					title="Google"
+				>
+					<svg viewBox="0 0 48 48">
+						<g>
+							<circle fill="#fff" cx="24" cy="24" r="20" />
+							<path
+								fill="#4285F4"
+								d="M43.6 20.5H24v7.1h11.2c-1.1 3-4.1 5.1-7.2 5.1-4.3 0-7.8-3.5-7.8-7.8s3.5-7.8 7.8-7.8c1.9 0 3.6.7 5 1.8l5.3-5.3C36.1 10.7 30.4 8 24 8 13.5 8 5 16.5 5 27s8.5 19 19 19 19-8.5 19-19c0-1.3-.1-2.5-.4-3.7z"
+							/>
+							<path
+								fill="#34A853"
+								d="M24 44c5.4 0 10-1.8 13.3-4.8l-6.2-5c-1.7 1.1-3.8 1.8-6.1 1.8-4.7 0-8.7-3.2-10.1-7.5H8.2v4.7C11.5 40.2 17.2 44 24 44z"
+							/>
+							<path
+								fill="#FBBC05"
+								d="M13.9 28.5c-.3-.9-.5-1.8-.5-2.8s.2-1.9.5-2.8v-4.7H8.2C7.4 20.7 7 23.3 7 25.7c0 2.4.4 5 1.2 7.2l5.7-4.4z"
+							/>
+							<path
+								fill="#EA4335"
+								d="M24 15.9c2.6 0 4.9.9 6.7 2.6l5-5C33.9 10.7 29.2 8 24 8c-6.8 0-12.5 3.8-15.8 9.3l6.2 4.8c1.4-4.3 5.4-7.5 10.1-7.5z"
+							/>
+						</g>
+					</svg>
+					<span>Google</span>
+				</a>
+				<a
+					class="quick-link"
+					href="https://www.youtube.com"
+					target="_blank"
+					title="YouTube"
+				>
+					<svg viewBox="0 0 48 48">
+						<g>
+							<rect
+								fill="#fff"
+								x="4"
+								y="10"
+								width="40"
+								height="28"
+								rx="8"
+							/>
+							<path
+								fill="#FF0000"
+								d="M44 18.5c0-2.2-1.8-4-4-4H8c-2.2 0-4 1.8-4 4v11c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4v-11z"
+							/>
+							<polygon fill="#fff" points="20,32 32,24 20,16" />
+						</g>
+					</svg>
+					<span>YouTube</span>
+				</a>
+				<a
+					class="quick-link"
+					href="https://www.github.com"
+					target="_blank"
+					title="GitHub"
+				>
+					<svg viewBox="0 0 48 48">
+						<g>
+							<circle fill="#fff" cx="24" cy="24" r="20" />
+							<path
+								fill="#181717"
+								d="M24 8C15.2 8 8 15.2 8 24c0 7.1 4.6 13.1 11 15.2.8.1 1-.3 1-.7v-2.7c-4.5 1-5.4-2.2-5.4-2.2-.7-1.7-1.7-2.2-1.7-2.2-1.4-1 .1-1 .1-1 1.5.1 2.3 1.5 2.3 1.5 1.4 2.3 3.7 1.6 4.6 1.2.1-1 .5-1.6.9-2-3.6-.4-7.4-1.8-7.4-8 0-1.8.6-3.2 1.5-4.3-.2-.4-.7-2 .1-4.1 0 0 1.3-.4 4.3 1.5 1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c3-1.9 4.3-1.5 4.3-1.5.8 2.1.3 3.7.1 4.1.9 1.1 1.5 2.5 1.5 4.3 0 6.2-3.8 7.6-7.4 8 .5.4 1 1.3 1 2.7v4c0 .4.2.8 1 .7C35.4 37.1 40 31.1 40 24c0-8.8-7.2-16-16-16z"
+							/>
+						</g>
+					</svg>
+					<span>GitHub</span>
+				</a>
+				<a
+					class="quick-link"
+					href="https://www.wikipedia.org"
+					target="_blank"
+					title="Wikipedia"
+				>
+					<svg viewBox="0 0 48 48">
+						<g>
+							<circle fill="#fff" cx="24" cy="24" r="20" />
+							<path
+								fill="#000"
+								d="M24 8C15.2 8 8 15.2 8 24c0 7.1 4.6 13.1 11 15.2.8.1 1-.3 1-.7v-2.7c-4.5 1-5.4-2.2-5.4-2.2-.7-1.7-1.7-2.2-1.7-2.2-1.4-1 .1-1 .1-1 1.5.1 2.3 1.5 2.3 1.5 1.4 2.3 3.7 1.6 4.6 1.2.1-1 .5-1.6.9-2-3.6-.4-7.4-1.8-7.4-8 0-1.8.6-3.2 1.5-4.3-.2-.4-.7-2 .1-4.1 0 0 1.3-.4 4.3 1.5 1.2-.3 2.5-.5 3.8-.5s2.6.2 3.8.5c3-1.9 4.3-1.5 4.3-1.5.8 2.1.3 3.7.1 4.1.9 1.1 1.5 2.5 1.5 4.3 0 6.2-3.8 7.6-7.4 8 .5.4 1 1.3 1 2.7v4c0 .4.2.8 1 .7C35.4 37.1 40 31.1 40 24c0-8.8-7.2-16-16-16z"
+							/>
+						</g>
+					</svg>
+					<span>Wikipedia</span>
+				</a>
+				<a
+					class="quick-link"
+					href="https://www.reddit.com"
+					target="_blank"
+					title="Reddit"
+				>
+					<svg viewBox="0 0 48 48">
+						<g>
+							<circle fill="#fff" cx="24" cy="24" r="20" />
+							<circle fill="#FF4500" cx="24" cy="24" r="12" />
+							<ellipse
+								fill="#fff"
+								cx="19"
+								cy="26"
+								rx="3"
+								ry="2"
+							/>
+							<ellipse
+								fill="#fff"
+								cx="29"
+								cy="26"
+								rx="3"
+								ry="2"
+							/>
+							<circle fill="#000" cx="19" cy="26" r="1" />
+							<circle fill="#000" cx="29" cy="26" r="1" />
+							<ellipse
+								fill="#fff"
+								cx="24"
+								cy="30"
+								rx="4"
+								ry="2"
+							/>
+							<circle fill="#FF4500" cx="34" cy="16" r="2" />
+							<path
+								stroke="#000"
+								stroke-width="1.5"
+								d="M32 18c-2-1-4-1-6-1s-4 0-6 1"
+								fill="none"
+							/>
+						</g>
+					</svg>
+					<span>Reddit</span>
+				</a>
+			</div>
+		</div>
+		<style>
+		.settings-icon {
+			position: absolute;
+			top: 24px;
+			right: 32px;
+			z-index: 10;
+			background: rgba(34,34,43,0.32);
+			border-radius: 50%;
+			padding: 8px;
+			transition: background 0.2s;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+		}
+		.settings-icon:hover {
+			background: rgba(99,102,241,0.7);
+		}
+		</style>
+	</body>
+</html>
