@@ -1,12 +1,9 @@
-import { notes } from "@/data/notes";
+import { PrismaClient } from "@prisma/client";
 
-// fetch all notes api
+const prisma = new PrismaClient();
+
 export async function GET() {
-    return Response.json(notes);
+	const notes = await prisma.note.findMany();
+	return Response.json(notes);
 }
-export async function POST(request) {
-    const {name,age} = await request.json();
-    const newNote = {id:crypto.randomUUID(),name,age};
-    notes.push(newNote);
-    return Response.json(newNote);
-}
+    

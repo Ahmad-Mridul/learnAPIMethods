@@ -12,20 +12,7 @@ function SingleNote() {
 	},[id]);
 	const handleEdit = async (e) => {
 		e.preventDefault();
-		const form = e.target;
-		const name = form.name.value;
-		const age = form.age.value;
-		const updatedNote = {
-			name,
-			age
-		}
-		fetch(`http://localhost:3000/api/notes/${id}`,{
-			method:"PUT",
-			headers:{
-				"Content-Type":"application/json"
-			},
-			body:JSON.stringify(updatedNote)
-		})
+		
 		// setNote(updatedNote);
 	}
 	return (
